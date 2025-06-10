@@ -1,54 +1,100 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React + TypeScript + Vite
 
-Currently, two official plugins are available:
+# 🛍 Online Store Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Це фронтенд-частина командного проєкту Online Store, створеного з використанням React, Vite, TypeScript та Tailwind CSS.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Стек технологій
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React — бібліотека для побудови UI
+- Vite — сучасний збирач (bundler)
+- TypeScript — типізація
+- Tailwind CSS — утилітарний CSS-фреймворк
+- HTML — базова розмітка
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 Структура гілок
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+| Гілка         | Призначення                            |
+|---------------|----------------------------------------|
+| main        | Стабільна версія (деплой/реліз)        |
+| dev         | Основна для поточної розробки          |
+| feature/*   | Для реалізації нових компонентів/фіч   |
+| bugfix/*    | Для виправлення помилок                |
+| hotfix/*    | Для термінових виправлень у main     |
+
+---
+
+## 👥 Як приєднатись до проєкту
+
+### 🔹 1. Склонуй репозиторій:
+
+```bash
+git clone https://github.com/Halyna79/online-store.git
+cd online-store
+npm install
+
+GitHub (https://github.com/Halyna79/online-store.git)
+GitHub - Halyna79/online-store: Frontend for team project - online store
+Frontend for team project - online store. Contribute to Halyna79/online-store development by creating an account on GitHub.
+
+⸻
+
+🔹 2. Створи нову гілку для своєї задачі:
+
+git checkout -b feature/назва
+
+
+⸻
+
+🔹 3. Додай, закоміть і запуш зміни:
+
+git add .
+git commit -m "Додано компонент ..."
+git push -u origin feature/назва
+
+
+⸻
+
+🔹 4. Створи Pull Request у GitHub:
+ • PR має бути в гілку dev
+ • Назви: feature: Назва компонента
+ • Додай опис, що саме зроблено
+
+
+⸻
+
+📦 Команди для запуску
+
+npm install        # Встановити залежності
+npm run dev        # Запуск проєкту
+npm run build      # Збірка
+
+
+⸻
+
+📝 Правила коду
+ • Назви гілок: feature/назва, bugfix/назва
+ • Один PR = одна задача
+ • Зміни тільки в своїй гілці
+ • Pull Request тільки в dev, не в main
+
+⸻
+
+📁 Структура проєкту
+
+online-store/
+│
+├── public/         # Статичні файли
+├── src/            # Компоненти, стилі, логіка
+│   ├── components/ # UI-компоненти
+│   ├── pages/      # Сторінки
+│   └── styles/     # Tailwind CSS / глобальні стилі
+├── index.html
+├── package.json
+└── tailwind.config.js
